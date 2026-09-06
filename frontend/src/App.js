@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
 import Pricing from "@/pages/Pricing";
+import About from "@/pages/About";
 import Admin from "@/pages/Admin";
 
 const ScrollToTop = () => {
@@ -49,6 +50,7 @@ function App() {
           <Routes>
             <Route path="/" element={<SiteLayout><Home /></SiteLayout>} />
             <Route path="/pricing" element={<SiteLayout><Pricing /></SiteLayout>} />
+            <Route path="/about" element={<SiteLayout><About /></SiteLayout>} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
           <Toaster position="top-center" richColors />

@@ -44,6 +44,9 @@ export default function Navbar() {
             <button data-testid="nav-services-link" onClick={goServices} className={linkCls(false)}>
               Services
             </button>
+            <Link data-testid="nav-about-link" to="/about" className={linkCls(location.pathname === "/about")}>
+              About
+            </Link>
             <Link data-testid="nav-pricing-link" to="/pricing" className={linkCls(location.pathname === "/pricing")}>
               Pricing
             </Link>
@@ -92,6 +95,7 @@ export default function Navbar() {
               {[
                 { label: "Home", testid: "mobile-nav-home-link", action: () => { setOpen(false); navigate("/"); } },
                 { label: "Services", testid: "mobile-nav-services-link", action: goServices },
+                { label: "About", testid: "mobile-nav-about-link", action: () => { setOpen(false); navigate("/about"); } },
                 { label: "Pricing", testid: "mobile-nav-pricing-link", action: () => { setOpen(false); navigate("/pricing"); } },
               ].map((item, i) => (
                 <motion.button
