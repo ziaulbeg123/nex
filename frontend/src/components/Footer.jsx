@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-5 text-sm text-neutral-500 leading-relaxed max-w-xs">
-            Precision engineering and design that commands attention. Web, apps, SEO, e-commerce and brand merch — built to convert.
+            Precision engineering and design that commands attention. Web, apps, AI agents, marketing and custom software — built to convert.
           </p>
         </div>
         <div>
@@ -29,8 +29,10 @@ export default function Footer() {
         <div>
           <p className="font-mono-tech text-xs uppercase tracking-[0.25em] text-yellow-500/80 mb-5">Contact</p>
           <ul className="space-y-3 text-sm text-neutral-400">
-            <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-yellow-500" /> hello@nexvoralabs.com</li>
-            <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-yellow-500" /> Mumbai · Remote-first</li>
+            <li><a href="mailto:nexvoralabs2@gmail.com" data-testid="footer-email-link" className="flex items-center gap-3 hover:text-yellow-500 transition-colors"><Mail className="h-4 w-4 text-yellow-500 shrink-0" /> nexvoralabs2@gmail.com</a></li>
+            <li><a href="tel:+919760415452" data-testid="footer-phone-1-link" className="flex items-center gap-3 hover:text-yellow-500 transition-colors"><Phone className="h-4 w-4 text-yellow-500 shrink-0" /> +91 97604 15452</a></li>
+            <li><a href="tel:+918191876059" data-testid="footer-phone-2-link" className="flex items-center gap-3 hover:text-yellow-500 transition-colors"><Phone className="h-4 w-4 text-yellow-500 shrink-0" /> +91 81918 76059</a></li>
+            <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-yellow-500 shrink-0" /> Warsaw, Poland · Aonla, Bareilly (India)</li>
           </ul>
         </div>
       </div>

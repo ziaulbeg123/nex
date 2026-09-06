@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, useMotionValue, useSpring, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, Code2, Smartphone, TrendingUp, ShoppingCart, Shirt, Gauge, Rocket, Layers } from "lucide-react";
+import { ArrowUpRight, Smartphone, Globe, AppWindow, Megaphone, Bot, BrainCircuit, BotMessageSquare, Code2, Gauge, Rocket, Layers } from "lucide-react";
 import { useContactModal } from "@/context/ContactModalContext";
 import Marquee from "@/components/Marquee";
 import { Reveal, Eyebrow } from "@/components/Reveal";
@@ -20,11 +20,14 @@ const MaskedLine = ({ children, delay = 0 }) => (
 );
 
 const SERVICES = [
-  { icon: Code2, title: "Bespoke Web Development", desc: "Custom React & Next.js architectures with sub-second performance." },
-  { icon: Smartphone, title: "Native & Cross-Platform Apps", desc: "iOS & Android solutions built for scale and seamless user experience." },
-  { icon: TrendingUp, title: "SEO & Growth Engine", desc: "Technical SEO, content strategy, and algorithmic domain authority scaling." },
-  { icon: ShoppingCart, title: "E-Commerce Systems", desc: "Custom Shopify, WooCommerce, and headless checkout optimization." },
-  { icon: Shirt, title: "Branding & Physical Merch", desc: "Brand identity, ivory prints, custom apparel, helmet, and merchandise design." },
+  { icon: Smartphone, title: "App Development", desc: "Native & cross-platform iOS and Android apps built for scale." },
+  { icon: Globe, title: "Web Development", desc: "Fast, SEO-ready websites engineered to convert visitors into clients." },
+  { icon: AppWindow, title: "Web App Development", desc: "Full-stack dashboards, portals and SaaS platforms with modern stacks." },
+  { icon: Megaphone, title: "Marketing", desc: "Digital ads, SEO and growth campaigns that compound month over month." },
+  { icon: Bot, title: "AI Agents", desc: "Autonomous agents that handle workflows, follow-ups and ops end-to-end." },
+  { icon: BrainCircuit, title: "RAG-Based Systems", desc: "Chat over your own documents and data with retrieval-grounded AI." },
+  { icon: BotMessageSquare, title: "AI Chatbots", desc: "24/7 customer-facing bots for support, sales and lead capture." },
+  { icon: Code2, title: "Custom Software", desc: "Bespoke internal tools and systems shaped exactly to your process." },
 ];
 
 const HeroVisual = () => {
@@ -154,7 +157,7 @@ export default function Home() {
         </Reveal>
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {SERVICES.map((s, i) => (
-            <Reveal key={s.title} delay={i * 0.08} className={i === 0 ? "lg:col-span-2" : ""}>
+            <Reveal key={s.title} delay={i * 0.06}>
               <div
                 data-testid={`service-card-${s.title.toLowerCase().replace(/[^a-z]+/g, "-")}`}
                 className="group h-full glass-panel p-6 sm:p-8 transition-all duration-500 hover:border-yellow-500/40 hover:gold-glow hover:-translate-y-1"
