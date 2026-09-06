@@ -1,0 +1,265 @@
+{
+  "project_name": "Nexvora Labs",
+  "app_type": "hybrid_fullstack",
+  "archetype": "LUXURY & SWISS HIGH-CONTRAST (Dark Ink + Molten Gold)",
+  "theme": "dark",
+  "design_philosophy": {
+    "core_identity": "E1 Anti-AI Awwwards-Level Digital Flagship",
+    "principles": [
+      "Fusion over Imitation: High-fashion editorial spacing paired with high-performance Swiss grid rhythm.",
+      "Molten Gold Focus: Pure #000000 / #0B0B0E dark obsidian canvas with surgical molten gold (#EAB308 / #D4AF37) accents for high-value CTAs and tier highlights.",
+      "Asymmetrical Tension: Left-aligned editorial hierarchy, numbered manifesto chapters (01 // CORE, 02 // SERVICES, 03 // PRICING), line-masked text reveals.",
+      "Tactile Glass & Metal: 1px subtle gold-tinted borders (rgba(234, 179, 8, 0.15)), backdrop-blur-xl dark cards, tracing glowing borders on hover.",
+      "Zero Visual Slop: Banned default Inter/Roboto for headings. Uses Outfit / Cormorant Garamond for display and JetBrains Mono for technical metadata."
+    ]
+  },
+  "colors": {
+    "css_variables": {
+      "background": "240 10% 4%",
+      "foreground": "0 0% 98%",
+      "card": "240 8% 6%",
+      "card_foreground": "0 0% 98%",
+      "popover": "240 10% 5%",
+      "popover_foreground": "0 0% 98%",
+      "primary": "45 93% 47%",
+      "primary_foreground": "240 10% 4%",
+      "secondary": "240 6% 12%",
+      "secondary_foreground": "0 0% 98%",
+      "muted": "240 6% 14%",
+      "muted_foreground": "240 5% 65%",
+      "accent": "45 93% 47%",
+      "accent_foreground": "240 10% 4%",
+      "destructive": "0 84% 60%",
+      "destructive_foreground": "0 0% 98%",
+      "border": "240 6% 16%",
+      "input": "240 6% 16%",
+      "ring": "45 93% 47%"
+    },
+    "hex_palette": {
+      "bg_canvas": "#070709",
+      "bg_surface": "#0E0E12",
+      "bg_surface_hover": "#16161E",
+      "bg_glass": "rgba(14, 14, 18, 0.75)",
+      "gold_primary": "#EAB308",
+      "gold_hover": "#CA8A04",
+      "gold_amber": "#F59E0B",
+      "gold_glow": "rgba(234, 179, 8, 0.25)",
+      "gold_border": "rgba(234, 179, 8, 0.2)",
+      "text_primary": "#F9FAFB",
+      "text_secondary": "#9CA3AF",
+      "text_muted": "#6B7280",
+      "border_dark": "#1F1F2A"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": "'Outfit', 'Syne', sans-serif",
+      "serif_display": "'Cormorant Garamond', 'Playfair Display', serif",
+      "body": "'Plus Jakarta Sans', 'Outfit', sans-serif",
+      "mono": "'JetBrains Mono', 'Fira Code', monospace"
+    },
+    "scale": {
+      "hero_title": "text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]",
+      "section_heading": "text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-tight",
+      "subsection_title": "text-xl sm:text-2xl font-medium tracking-normal",
+      "card_title": "text-lg sm:text-xl font-semibold",
+      "body_lead": "text-base sm:text-lg text-neutral-400 font-normal leading-relaxed",
+      "body_regular": "text-sm sm:text-base text-neutral-300 leading-normal",
+      "caption_mono": "text-xs font-mono uppercase tracking-[0.2em] text-yellow-500/80"
+    }
+  },
+  "layout_and_spacing": {
+    "containers": {
+      "max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_padding": "py-16 sm:py-24 lg:py-32",
+      "card_padding": "p-6 sm:p-8"
+    },
+    "grids": {
+      "hero_grid": "grid grid-cols-1 lg:grid-cols-12 gap-12 items-center",
+      "services_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8",
+      "pricing_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch"
+    }
+  },
+  "motion_and_effects": {
+    "lenis": "Smooth momentum scrolling enabled on window",
+    "framer_motion": {
+      "hero_mask_reveal": "Line-by-line staggered text translateY from 100% to 0% with opacity transition (delay 0.1s)",
+      "card_hover_tilt": "3D slight transform hover effect (scale: 1.02, border gold glow)",
+      "scroll_reveal": "Fade up with y: 30px, duration: 0.6s, ease: 'easeOut', viewport once: true",
+      "marquee_drift": "Slow continuous horizontal scroll (duration 35s)"
+    },
+    "glassmorphism": "backdrop-blur-xl bg-[#0E0E12]/80 border border-yellow-500/15 shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+  },
+  "page_specifications": {
+    "navbar": {
+      "layout": "Fixed top z-50 w-full backdrop-blur-xl bg-[#070709]/80 border-b border-white/5 py-4",
+      "brand": "NEXVORA LABS // (Molten Gold 'N' logo icon + serif brand wordmark)",
+      "desktop_links": ["Services", "Pricing"],
+      "action_cta": "Start Project (Opens shared Contact Modal)",
+      "mobile_menu": "Full-screen dark overlay sheet with staggered motion link entrances"
+    },
+    "home_page": {
+      "hero_section": {
+        "eyebrow": "01 // DIGITAL ARCHITECTURE & BRANDING",
+        "title": "We engineer high-converting web applications, mobile platforms & iconic digital identities.",
+        "description": "Nexvora Labs partners with ambitious enterprises to deliver bespoke engineering, SEO dominance, and high-margin e-commerce architecture.",
+        "ctas": ["Explore Pricing", "Start Project"],
+        "hero_visual": "3D Floating Molten Gold Orb / Interactive Tilt Glass Card with live metrics"
+      },
+      "editorial_marquee": "WEB DEV • APP DEV • SEO DOMINANCE • E-COMMERCE • BRAND MERCH • HIGH PERFORMANCE • NEXVORA LABS",
+      "services_section": {
+        "eyebrow": "02 // CAPABILITIES & SERVICES",
+        "title": "Full-spectrum digital execution.",
+        "services_list": [
+          {"id": "web_dev", "title": "Bespoke Web Development", "desc": "Custom React & Next.js architectures with sub-second performance."},
+          {"id": "app_dev", "title": "Native & Cross-Platform Apps", "desc": "iOS & Android solutions built for scale and seamless user experience."},
+          {"id": "seo", "title": "SEO & Growth Engine", "desc": "Technical SEO, content strategy, and algorithmic domain authority scaling."},
+          {"id": "ecommerce", "title": "E-Commerce Systems", "desc": "Custom Shopify, WooCommerce, and headless checkout optimization."},
+          {"id": "branding", "title": "Branding & Physical Merch", "desc": "Brand identity, ivory prints, custom apparel, helmet, and merchandise design."}
+        ]
+      },
+      "manifesto_section": {
+        "eyebrow": "03 // OUR MANIFESTO",
+        "content": "No templates. No fluff. Just precision engineering and design that commands attention."
+      }
+    },
+    "pricing_page": {
+      "path": "/pricing",
+      "top_promo_banner": {
+        "text": "Get up to 20% off your first WebMan plan. Offer valid for a limited time",
+        "style": "bg-gradient-to-r from-amber-500/20 via-yellow-500/10 to-amber-500/20 border-b border-yellow-500/30 py-3 text-center text-sm font-medium text-yellow-300"
+      },
+      "hero": {
+        "eyebrow": "01 // TRANSPARENT INVESTMENT",
+        "title": "Per-project pricing tailored to your scale.",
+        "subtitle": "Fixed investment tiers with guaranteed deliverables, zero hidden fees, and ongoing maintenance discounts."
+      },
+      "pricing_cards": [
+        {
+          "name": "Launch",
+          "price": "₹10,499",
+          "original_price": null,
+          "savings_badge": "Save ₹20,000 p.a.",
+          "badge": null,
+          "highlighted": false,
+          "cta_text": "Contact sales",
+          "features": ["Professional Websites", "SEO Optimization", "Secure checkout", "Deliveries", "Tracking"]
+        },
+        {
+          "name": "Grow",
+          "price": "₹28,499",
+          "original_price": "₹30,499",
+          "savings_badge": "Save ₹50,000",
+          "badge": null,
+          "highlighted": false,
+          "cta_text": "Contact sales",
+          "features": ["Professional Websites", "App dev", "SEO", "E-commerce", "Secure checkout", "Custom animations", "Tracking", "Digital ads"]
+        },
+        {
+          "name": "Pro",
+          "price": "₹48,499",
+          "original_price": "₹53,499",
+          "savings_badge": "Save ₹70,000",
+          "maintenance_offer": "100% off maintenance 1yr",
+          "badge": null,
+          "highlighted": false,
+          "cta_text": "Contact sales",
+          "features": ["Professional Websites", "App dev", "SEO", "E-commerce", "Secure checkout", "Custom animations", "Multilingual", "Tracking", "Digital ads", "Ivory template prints", "Ad boosts", "Posters"]
+        },
+        {
+          "name": "Plus",
+          "price": "₹61,499",
+          "original_price": "₹66,499",
+          "savings_badge": "Save ₹1,00,000",
+          "maintenance_offer": "100% off maintenance 1yr",
+          "badge": "MOST POPULAR",
+          "highlighted": true,
+          "cta_text": "Contact sales",
+          "features": ["Professional Websites", "App dev", "SEO", "E-commerce", "Secure checkout", "Custom animations", "Multilingual", "Tracking", "Digital ads", "Ivory template prints", "Ad boosts", "Posters", "Deliveries", "T-shirts", "Helmet", "Bag"]
+        },
+        {
+          "name": "Enterprise",
+          "price": "Let's talk",
+          "original_price": null,
+          "savings_badge": "Save ₹1,50,000",
+          "badge": "CUSTOM SCALE",
+          "highlighted": false,
+          "cta_text": "Contact team",
+          "features": ["Professional Websites", "App dev", "SEO", "E-commerce", "Secure checkout", "Custom animations", "Multilingual", "Tracking", "Digital ads", "Ivory template prints", "Ad boosts", "Posters", "Deliveries", "T-shirts", "Helmet", "Bag", "Seasonal redesigns", "Franchise optimization"]
+        }
+      ],
+      "compare_matrix_table": {
+        "title": "Compare all plans & features",
+        "desktop_view": "Sticky header table with tier names + CTAs + MOST POPULAR pill on Plus column, checkmarks vs dashes",
+        "mobile_view": "Accordion-style tier-wise collapse with full feature list per tier",
+        "features_list": [
+          "Professional Websites",
+          "App dev",
+          "SEO",
+          "E-commerce",
+          "Secure checkout",
+          "Custom animations",
+          "Multilingual",
+          "Tracking",
+          "Digital ads",
+          "Ivory template prints",
+          "Ad boosts",
+          "Posters",
+          "Deliveries",
+          "T-shirts",
+          "Helmet",
+          "Bag",
+          "Seasonal redesigns",
+          "Franchise optimization"
+        ]
+      }
+    },
+    "shared_contact_modal": {
+      "trigger": "Triggered by 'Start Project', 'Contact sales', or 'Contact team' buttons",
+      "prefill_behavior": "When triggered from a pricing card, 'interested_plan' form field auto-prefills with the tier name (Launch, Grow, Pro, Plus, Enterprise)",
+      "fields": [
+        {"name": "full_name", "label": "Full Name", "type": "text", "required": true},
+        {"name": "email", "label": "Work Email", "type": "email", "required": true},
+        {"name": "phone", "label": "Phone Number", "type": "tel", "required": false},
+        {"name": "interested_plan", "label": "Interested Plan", "type": "select", "options": ["Launch", "Grow", "Pro", "Plus", "Enterprise", "General Inquiry"], "required": true},
+        {"name": "message", "label": "Project Details & Goals", "type": "textarea", "required": true}
+      ],
+      "submit_behavior": "POST request to /api/leads backend endpoint, triggers Sonner toast notification on success"
+    },
+    "admin_dashboard": {
+      "path": "/admin",
+      "authentication": "JWT Admin Login modal/page (Username & Password verification against backend)",
+      "features": [
+        "Leads table displaying columns: ID, Full Name, Email, Phone, Interested Plan, Message, Created At",
+        "Filter by Interested Plan dropdown",
+        "Search by lead name / email",
+        "Export CSV option"
+      ]
+    },
+    "footer": {
+      "note": "NO About page link as requested",
+      "links": ["Home", "Pricing", "Admin Dashboard"],
+      "branding": "NEXVORA LABS © 2026 // ALL RIGHTS RESERVED."
+    }
+  },
+  "media_assets": {
+    "abstract_gold_hero": "https://images.unsplash.com/photo-1782155789210-e1e2f0be97dd?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "dark_metallic_texture": "https://images.unsplash.com/photo-1760978632119-5069b6c9fb68?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "minimal_studio_arch": "https://images.unsplash.com/photo-1631477076114-9123f721b9dc?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "dark_workspace": "https://images.unsplash.com/photo-1510519138101-570d1dca3d66?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Ensure the About link is COMPLETELY removed from Navbar and Footer.",
+    "Implement the /pricing route with top promo banner, 5 pricing cards, and compare matrix table.",
+    "Ensure the Plus plan card has the MOST POPULAR badge and highlighted gold border.",
+    "Ensure shared Contact modal auto pre-fills the interested_plan field when opened from pricing cards.",
+    "Mobile compare matrix table MUST use tier-wise accordion collapse.",
+    "Implement JWT admin login on /admin with leads table showing interested_plan column.",
+    "All interactive elements MUST include clear data-testid attributes."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "test_id_rule": "MUST add data-testid to all interactive components (buttons, inputs, links, tabs, modals).",
+    "avoid_ai_slop": "Use dark obsidian (#070709) background with surgical gold (#EAB308) accents. Avoid generic purple/blue gradients or centered bootstrap boxes.",
+    "toast_library": "Use Sonner for all toast notifications."
+  }
+}

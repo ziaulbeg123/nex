@@ -1,0 +1,43 @@
+import { Link } from "react-router-dom";
+import { Mail, MapPin } from "lucide-react";
+
+export default function Footer() {
+  return (
+    <footer data-testid="site-footer" className="border-t border-white/5 bg-[#050506]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-8 w-8 items-center justify-center bg-yellow-500 text-black font-heading font-extrabold text-lg">N</span>
+            <span className="font-heading font-semibold tracking-[0.18em] text-sm text-neutral-100">
+              NEXVORA LABS <span className="text-yellow-500">//</span>
+            </span>
+          </div>
+          <p className="mt-5 text-sm text-neutral-500 leading-relaxed max-w-xs">
+            Precision engineering and design that commands attention. Web, apps, SEO, e-commerce and brand merch — built to convert.
+          </p>
+        </div>
+        <div>
+          <p className="font-mono-tech text-xs uppercase tracking-[0.25em] text-yellow-500/80 mb-5">Explore</p>
+          <ul className="space-y-3 text-sm">
+            <li><Link data-testid="footer-home-link" to="/" className="text-neutral-400 hover:text-yellow-500 transition-colors">Home</Link></li>
+            <li><Link data-testid="footer-services-link" to="/#services" className="text-neutral-400 hover:text-yellow-500 transition-colors">Services</Link></li>
+            <li><Link data-testid="footer-pricing-link" to="/pricing" className="text-neutral-400 hover:text-yellow-500 transition-colors">Pricing</Link></li>
+            <li><Link data-testid="footer-admin-link" to="/admin" className="text-neutral-400 hover:text-yellow-500 transition-colors">Admin Dashboard</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="font-mono-tech text-xs uppercase tracking-[0.25em] text-yellow-500/80 mb-5">Contact</p>
+          <ul className="space-y-3 text-sm text-neutral-400">
+            <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-yellow-500" /> hello@nexvoralabs.com</li>
+            <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-yellow-500" /> Mumbai · Remote-first</li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-white/5">
+        <p className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 font-mono-tech text-xs tracking-[0.2em] text-neutral-600 uppercase">
+          Nexvora Labs © 2026 // All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 240 10% 4%;
+        --foreground: 0 0% 98%;
+        --card: 240 8% 6%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 5%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 45 93% 47%;
+        --primary-foreground: 240 10% 4%;
+        --secondary: 240 6% 12%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 6% 14%;
+        --muted-foreground: 240 5% 65%;
+        --accent: 45 93% 47%;
+        --accent-foreground: 240 10% 4%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 6% 16%;
+        --input: 240 6% 16%;
+        --ring: 45 93% 47%;
+        --radius: 0.5rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        background-color: #070709;
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    ::selection {
+        background: #EAB308;
+        color: #070709;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #070709;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #26262f;
+        border-radius: 8px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(234, 179, 8, 0.4);
+    }
+}
+
+@layer utilities {
+    .font-heading {
+        font-family: 'Outfit', sans-serif;
+    }
+    .font-serif-display {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .font-mono-tech {
+        font-family: 'JetBrains Mono', monospace;
+    }
+    .glass-panel {
+        @apply backdrop-blur-xl bg-[#0E0E12]/80 border border-yellow-500/15 shadow-[0_8px_32px_rgba(0,0,0,0.5)];
+    }
+    .gold-glow {
+        box-shadow: 0 0 40px rgba(234, 179, 8, 0.18), 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    .text-gold-gradient {
+        background: linear-gradient(120deg, #F59E0B 0%, #EAB308 45%, #FDE68A 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes marquee-drift {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee-drift 38s linear infinite;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
