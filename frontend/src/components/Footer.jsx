@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -32,6 +32,7 @@ export default function Footer() {
             <li><a href="mailto:nexvoralabs2@gmail.com" data-testid="footer-email-link" className="flex items-center gap-3 hover:text-yellow-500 transition-colors"><Mail className="h-4 w-4 text-yellow-500 shrink-0" /> nexvoralabs2@gmail.com</a></li>
             <li><a href="tel:+919760415452" data-testid="footer-phone-1-link" className="flex items-center gap-3 hover:text-yellow-500 transition-colors"><Phone className="h-4 w-4 text-yellow-500 shrink-0" /> +91 97604 15452</a></li>
             <li><a href="tel:+918191876059" data-testid="footer-phone-2-link" className="flex items-center gap-3 hover:text-yellow-500 transition-colors"><Phone className="h-4 w-4 text-yellow-500 shrink-0" /> +91 81918 76059</a></li>
+            <li><a href="https://wa.me/919760415452" target="_blank" rel="noopener noreferrer" data-testid="footer-whatsapp-link" className="flex items-center gap-3 hover:text-green-400 transition-colors"><MessageCircle className="h-4 w-4 text-green-400 shrink-0" /> WhatsApp — chat instantly</a></li>
             <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-yellow-500 shrink-0" /> Warsaw, Poland · Aonla, Bareilly (India)</li>
           </ul>
         </div>
