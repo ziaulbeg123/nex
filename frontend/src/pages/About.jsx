@@ -4,40 +4,34 @@ import { Reveal, Eyebrow } from "@/components/Reveal";
 
 const PROJECTS = [
   {
-    id: "aurelia-jewels",
-    name: "Aurelia Jewels",
-    sector: "Luxury D2C E-Commerce",
-    plan: "Plus",
-    img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1200&auto=format&fit=crop",
-    desc: "Headless storefront with secure checkout, custom animations and ivory-print packaging inserts for a heritage jewellery house.",
-    results: ["3.2x conversion uplift", "0.8s LCP"],
+    id: "flyeducation",
+    name: "Edufly — flyeducation.in",
+    sector: "Study-Abroad Consultancy",
+    badge: "Live Site",
+    url: "https://flyeducation.in",
+    img: "/projects/flyeducation.jpg",
+    desc: "Editorial boarding-pass style site for a study-abroad studio — university applications, visa processing and scholarships across UK, Germany, Poland and Dubai, with live placement counter and consultation booking.",
+    results: ["12,480+ students placed", "99.2% visa success"],
   },
   {
-    id: "fitforge",
-    name: "FitForge",
-    sector: "Fitness Platform · iOS + Android",
-    plan: "Grow",
-    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
-    desc: "Cross-platform app with workout tracking, digital ads engine and a companion marketing site built for sub-second loads.",
-    results: ["40k downloads in 90 days", "4.8★ store rating"],
+    id: "wzanalytics",
+    name: "WZ Analytics — wzanalytics.site",
+    sector: "AI SaaS · Poland & UK",
+    badge: "Live Site",
+    url: "https://wzanalytics.site",
+    img: "/projects/wzanalytics.jpg",
+    desc: "Bilingual (PL/EN) product site for an AI analytics service that emails daily business reports to restaurants and cafés — with pricing, FAQ and a 2-week free-trial funnel.",
+    results: ["50+ businesses served", "+18% avg. revenue growth"],
   },
   {
-    id: "kaveri-textiles",
-    name: "Kaveri Textiles",
-    sector: "B2B Heritage Brand",
-    plan: "Pro",
-    img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop",
-    desc: "Multilingual catalogue site with a technical SEO engine, ivory template prints and posters for a 60-year-old textile house.",
-    results: ["+212% organic traffic", "4 languages live"],
-  },
-  {
-    id: "urbanmoto",
-    name: "UrbanMoto",
-    sector: "Riding Gear & Merch",
-    plan: "Enterprise",
-    img: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop",
-    desc: "Full brand system with e-commerce, helmet and apparel merch lines, seasonal redesigns and franchise onboarding flows.",
-    results: ["12 franchises onboarded", "Pan-India deliveries"],
+    id: "personal-portfolios",
+    name: "Personal Portfolios",
+    sector: "Founders · Creators · Professionals",
+    badge: "Ongoing",
+    url: null,
+    img: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1200&auto=format&fit=crop",
+    desc: "Custom-coded portfolio sites for founders, creators and working professionals — sharp personal branding, sub-second loads and SEO baked in from day one.",
+    results: ["Custom design + code", "SEO-ready, sub-second loads"],
   },
 ];
 
@@ -47,24 +41,25 @@ const VALUES = [
   { icon: Award, title: "Ownership", desc: "One senior team, end to end — no handoffs, no excuses." },
 ];
 
-const ProjectCard = ({ project, index }) => (
-  <Reveal delay={(index % 2) * 0.12} className={index % 2 === 1 ? "md:mt-16" : ""}>
-    <article data-testid={`about-project-${project.id}`} className="group glass-panel overflow-hidden transition-all duration-500 hover:border-yellow-500/40 hover:gold-glow">
+const ProjectCard = ({ project, index }) => {
+  const inner = (
+    <article data-testid={`about-project-${project.id}`} className="group glass-panel overflow-hidden h-full transition-all duration-500 hover:border-yellow-500/40 hover:gold-glow">
       <div className="relative overflow-hidden aspect-[4/3]">
         <img
           src={project.img}
           alt={project.name}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#070709]/90 via-transparent to-transparent" />
-        <span className="absolute left-4 top-4 bg-yellow-500 text-black px-2.5 py-1 font-mono-tech text-[10px] uppercase tracking-[0.2em] font-semibold">
-          {project.plan} build
+        <span className="absolute left-4 top-4 flex items-center gap-1.5 bg-yellow-500 text-black px-2.5 py-1 font-mono-tech text-[10px] uppercase tracking-[0.2em] font-semibold">
+          {project.badge}
+          {project.url && <ArrowUpRight className="h-3 w-3" />}
         </span>
       </div>
-      <div className="p-6 sm:p-8">
+      <div className="p-6 sm:p-7">
         <p className="font-mono-tech text-xs uppercase tracking-[0.2em] text-yellow-500/80">{project.sector}</p>
-        <h3 className="mt-2 font-heading text-xl sm:text-2xl font-semibold text-neutral-100">{project.name}</h3>
+        <h3 className="mt-2 font-heading text-xl font-semibold text-neutral-100">{project.name}</h3>
         <p className="mt-3 text-sm text-neutral-400 leading-relaxed">{project.desc}</p>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.results.map((r) => (
@@ -75,8 +70,20 @@ const ProjectCard = ({ project, index }) => (
         </div>
       </div>
     </article>
-  </Reveal>
-);
+  );
+
+  return (
+    <Reveal delay={(index % 3) * 0.1} className={index % 3 === 1 ? "lg:mt-14" : ""}>
+      {project.url ? (
+        <a href={project.url} target="_blank" rel="noopener noreferrer" data-testid={`about-project-link-${project.id}`} className="block h-full">
+          {inner}
+        </a>
+      ) : (
+        inner
+      )}
+    </Reveal>
+  );
+};
 
 export default function About() {
   const { open: openContact } = useContactModal();
@@ -120,7 +127,7 @@ export default function About() {
             Previous builds <span className="font-serif-display italic font-medium text-gold-gradient">we're proud of.</span>
           </h2>
         </Reveal>
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
           {PROJECTS.map((p, i) => (
             <ProjectCard key={p.id} project={p} index={i} />
           ))}

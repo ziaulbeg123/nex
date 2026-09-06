@@ -29,7 +29,7 @@ Note: the environment contained only the blank starter template (no pre-existing
 - Pricing page: promo banner, 5 tier cards with savings/maintenance offers, MOST POPULAR Plus treatment, compare matrix (sticky header desktop, accordion mobile), final CTA.
 - Contact modal: plan pre-fill, Sonner toast, saves to MongoDB.
 - Admin panel `/admin`: JWT login, leads table (name/email/phone/plan/message/date), plan filter, search, CSV export, logout.
-- About page `/about` restored (2026-09-06): lab intro + stats, 4 selected previous projects (Aurelia Jewels/Plus, FitForge/Grow, Kaveri Textiles/Pro, UrbanMoto/Enterprise) with photography + result chips, values strip, CTA. About link added to navbar (desktop + mobile) and footer.
+- About page `/about` restored (2026-09-06): lab intro + stats, selected previous projects with live-site screenshots + result chips, values strip, CTA. Projects (real, per user): Edufly — flyeducation.in (study-abroad consultancy), WZ Analytics — wzanalytics.site (AI SaaS, Poland/UK), Personal Portfolios (ongoing). Project images saved at frontend/public/projects/. About link in navbar (desktop + mobile) and footer.
 - Backend: leads + auth endpoints, admin seeding, 401 protection verified.
 - Verified end-to-end: curl (health, login, me, lead create, admin list, 401) + browser (home, pricing CTA → modal pre-fill → submit → admin shows lead; mobile accordion + mobile menu).
 
