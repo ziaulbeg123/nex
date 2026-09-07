@@ -186,7 +186,7 @@ export default function Pricing() {
       >
         <p className="text-sm font-medium text-yellow-300 flex items-center justify-center gap-2 flex-wrap">
           <Sparkles className="h-4 w-4 shrink-0" />
-          Get up to 20% off your first WebMan plan. Offer valid for a limited time**
+          Get up to 20% off your first plan. Offer valid for a limited time**
         </p>
       </div>
 
